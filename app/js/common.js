@@ -12,7 +12,7 @@ $(document).ready(function() {
 		prevArrow: '<div class="sl-arrow sl-left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', 
 		nextArrow: '<div class="sl-arrow sl-right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', 
 	});
-
+	// навигация по верхнему слайдеру
 	$(".sl-nav").slick({
 		arrows: false,
 		slidesToShow: 3,
@@ -20,6 +20,15 @@ $(document).ready(function() {
 		asNavFor: '.sl-header',
 		centerMode: true,
 		focusOnSelect: true
+	});
+
+	// слайдер portfolio
+	$(".sl-portfolio").slick({
+		arrows: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<div class="sl-arrow sl-left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', 
+		nextArrow: '<div class="sl-arrow sl-right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', 
 	});
 	//плавный скрол в хроме
 	try {

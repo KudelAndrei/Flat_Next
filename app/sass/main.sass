@@ -12,10 +12,23 @@
 	&__desc
 		margin-bottom: 35px
 
+a.button
+	background-color: $accent-color
+	color: $bgc-color
+	padding: 15px 30px
+	border-radius: 4px
+	font-size: 14px
+	font-weight: bold
+	display: inline-block
+	i 
+		margin-left: 10px
+	&:hover
+		text-decoration: none
 
 
 // секция responsive
 .responsive
+	position: relative
 	.responsive-text 
 		text-align: left
 		&__head
@@ -25,8 +38,30 @@
 			opacity: .9
 			strong
 				font-weight: bold
+	.responsive
+		&--mobile
+			position: absolute
+			width: 190px
+			bottom: 0
+			left: 40px
+		&--tablet
+			width: 480px
+			margin-bottom: -2px
+		&--psd
+			position: absolute
+			top: 30px
+			left: 20px
+			width: 160px
+			height: 160px
 
-
-
+// секция portfolio
+.portfolio
+	background-color: $gray-color
+	padding-bottom: 60px
+	.sl-portfolio
+		text-align: center
+		margin-top: 10px
+		&__img
+			display: inline-block
 
 @import "media"
