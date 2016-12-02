@@ -68,8 +68,12 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<a href="#" class="logo">
-							<img src="img/logo.svg" alt="Fair">
-							<span>fair</span>
+							<span class="wrap-logo">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							<p class="logo__text">fair</p>
 						</a>
 					</div>
 					<div class="col-lg-6">
@@ -85,10 +89,10 @@
 					</div>
 					<div class="col-lg-4">
 						<form action="" class="top-form">
-							<a href="#" class="button"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-							<a href="#" class="button"><i class="fa fa-random" aria-hidden="true"></i></a>
-							<label for="">
-								<input type="text">
+							<a href="#" class="button top-form__auth"><i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
+							<a href="#" class="button top-form__rand"><i class="fa fa-random" aria-hidden="true"></i></a>
+							<label for="" class="top-form__search">
+								<input type="text" placeholder="search...">
 								<button><i class="fa fa-search" aria-hidden="true"></i></button>
 							</label>
 						</form>
@@ -104,7 +108,8 @@
 				<div class="col-lg-12">
 					
 					<div class="sl-header">
-
+						
+						<!-- слайд -->
 						<div class="sl-header__slide">
 							<h1 class="sl-header__head">“A Title Showcase Example Presentation”</h1>
 							<p class="sl-header__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
@@ -113,17 +118,109 @@
 							</div>
 						</div>
 
-						<div class="sl-head__slide">
-							awd
+						<!-- слайд -->
+						<div class="sl-header__slide">
+							<h1 class="sl-header__head">“A Title Showcase Example Presentation”</h1>
+							<p class="sl-header__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+							<div class="sl-header__img">
+								<img src="img/header/sl2.png" alt="Computer">
+							</div>
+						</div>
+
+						<!-- слайд -->
+						<div class="sl-header__slide">
+							<h1 class="sl-header__head">“A Title Showcase Example Presentation”</h1>
+							<p class="sl-header__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+							<div class="sl-header__img">
+								<img src="img/header/sl3.png" alt="Computer">
+							</div>
 						</div>
 
 					</div>
-
 				</div>
 			</div>
 		</div>
 
+		<!-- навигация по слайдеру -->
+		<section class="sl-dots">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+
+						<div class="sl-nav">
+							
+							<!-- слад 1 -->
+							<div class="sl-nav__item sl-nav--monitor">
+								<div class="sl-nav__img">
+									<img src="img/format/1.png" alt="devise monitor">
+								</div>
+								<a href="#" class="sl-nav__head"><h3>Monitor Format</h3></a>
+								<p class="sl-nav__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nostrum nobis doloribus!</p>
+								<a href="#" class="sl-nav__link"><i class="fa fa-plus" aria-hidden="true"></i></a>
+							</div>
+
+							<!-- слад 2 -->
+							<div class="sl-nav__item sl-nav--iphone">
+								<div class="sl-nav__img">
+									<img src="img/format/2.png" alt="devise iphone">
+								</div>
+								<a href="#" class="sl-nav__head"><h3>iPhone Format</h3></a>
+								<p class="sl-nav__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nostrum nobis doloribus!</p>
+								<a href="#" class="sl-nav__link"><i class="fa fa-plus" aria-hidden="true"></i></a>
+							</div>
+
+							<!-- слад 3 -->
+							<div class="sl-nav__item sl-nav--ipad">
+								<div class="sl-nav__img">
+									<img src="img/format/3.png" alt="devise ipad">
+								</div>
+								<a href="#" class="sl-nav__head"><h3>iPad Format</h3></a>
+								<p class="sl-nav__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nostrum nobis doloribus!</p>
+								<a href="#" class="sl-nav__link"><i class="fa fa-plus" aria-hidden="true"></i></a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
 	</header>
+
+	<!-- секция responsive -->
+	<section class="responsive sect">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="sect__head">Think Responsive, Customize at Will</h2>
+					<p class="sect__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8">
+					
+					<div class="responsive__img">
+						<img src="img/download/mobile.png" alt="mobile">
+						<img src="img/download/tablet.png" alt="tablet">
+					</div>
+
+				</div>
+
+				<div class="col-lg-4">
+					<div class="responsive-text">
+						<h3 class="responsive-text__head">Template for you Projects</h3>
+						<p class="responsive-text__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<p class="responsive-text__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<p class="responsive-text__desc"><strong>Duis aute irure dolor in reprehenderit</strong> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+						<a href="#" class="button">Download</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
 
 	<div class="hidden">
 		<!-- code -->
