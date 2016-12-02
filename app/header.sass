@@ -17,19 +17,22 @@ h1
 	line-height: 72px
 h2
 	font-size: 32px
-	line-height: 72px
+	line-height: 50px
 h3
 	font-size: 21px
-	line-height: 56px
+	line-height: 35px
 h4
 	font-size: 14px
-	line-height: 56px
+	line-height: 30px
 p,span,b,strong
 	font-size: 16px
-	line-height: 30px
+	line-height: 22px
 
 a 
 	outline: none!important
+	color: $link-color
+	&:active, &:focus
+		text-decoration: none
 
 body
 	font-family: "arial", sans-serif
@@ -154,10 +157,12 @@ a.logo
 			box-shadow: $shadow
 			transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.2s
 			&:hover
-				color: $bgc-color
+				color: #fff
 				&::before
 					opacity: 1
-					background-color: $accent-color
+					transform: scale(0.9)
+					border-radius: 50%
+
 
 //шапка сайта
 .main-head
@@ -173,30 +178,6 @@ a.logo
 		padding: 20px 0
 		background-color: rgba(darken($bgc-color, 5%), .5)
 		border-bottom: 1px solid darken($bgc-color, 5%)
-
-	// слайдер
-	.sl-header
-		text-align: center
-		position: relative
-		.sl-header__slide
-			margin-top: 50px
-		.sl-header__head
-			color: #fff
-			margin-bottom: 10px
-			text-shadow: $text-shadow
-			display: inline-block
-		.sl-header__desc
-			opacity: .7
-			margin-bottom: 40px
-		.sl-header__img
-			display: inline-block
-			vertical-align: bottom
-			max-width: 100%
-			height: 500px
-			img
-				width: 100%
-				height: 100%
-		
 
 	
 	// form шапки
@@ -248,3 +229,123 @@ a.logo
 				&:hover
 					background-color: lighten($bgc-color, 12%) 
 					color: $accent-color
+
+
+// слайдер
+.sl-header
+	text-align: center
+	position: relative
+	overflow: hidden
+	.sl-header__slide
+		margin-top: 50px
+	.sl-header__head
+		color: #fff
+		margin-bottom: 10px
+		text-shadow: $text-shadow
+		display: inline-block
+	.sl-header__desc
+		opacity: .7
+		margin-bottom: 40px
+	.sl-header__img
+		display: inline-block
+		vertical-align: bottom
+		max-width: 100%
+		height: 500px
+		img
+			width: 100%
+			height: 100%
+//навигация по слайдеру
+.sl-dots
+	color: $bgc-color
+	background-color: $gray-color
+	text-align: center
+.sl-nav
+	padding: 50px 0
+	.sl-nav__item
+		cursor: pointer
+		position: relative
+		&::before
+			position: absolute
+			content: ""
+			width: 1px
+			height: 50px
+			background-color: #c1c2c2
+			right: -10px
+			top: 60px
+		&:hover
+			.sl-nav__img
+				&::before
+					opacity: 1
+					transform: scale(1)
+					border-radius: 0
+			.sl-nav__head
+				h3
+					color: $link-color
+	.sl-nav
+		&__img
+			display: inline-block
+			height: 180px
+			max-width: 100%
+			position: relative
+			&::before
+				position: absolute
+				content: ""
+				top: 37px
+				left: 5px
+				width: 94%
+				height: 56%
+				transform: scale(0)
+				border-radius: 50%
+				opacity: 0
+				transform-origin: 50%
+				transition: all cubic-bezier(.65,.05,.36,1) 0.3s
+				background-color: $accent-color
+			img 
+				width: 100%	
+		&__head
+			font-size: 21px
+			line-height: 56px
+			font-weight: bold
+			display: block
+			h3 
+				transition: all ease 0.2s
+		&__link
+			background-color: $gray-color
+			color: $bgc-color
+			display: block
+			position: absolute
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			top: 22%
+			left: 43%
+			transition: all ease-in-out 0.2s
+			i 
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				font-size: 20px
+			&:hover
+				background-color: $bgc-color
+				color: $accent-color
+	.sl-nav--iphone
+		.sl-nav__img
+			&::before
+				width: 79px
+				height: 110px
+				top: 22px
+				left: 42px
+		.sl-nav__link
+			top: 50px
+	.sl-nav--ipad
+		&::before
+			display: none
+		.sl-nav__img
+			&::before
+				top: 15px
+				left: 31px
+				width: 99px
+				height: 127px
+		.sl-nav__link
+			top: 50px
