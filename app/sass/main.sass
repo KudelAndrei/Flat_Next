@@ -25,6 +25,22 @@ a.button
 	&:hover
 		text-decoration: none
 
+// кнопка
+.btn
+	background-color: $accent-color
+	color: $bgc-color
+	border: none
+	padding: 10px 20px
+	font-weight: bold
+	border-radius: 4px
+	transition: all ease 0.2s
+	&:hover
+		background-color: lighten($accent-color, 15%)
+	i 
+		font-size: 22px
+		margin: 0 5px
+		font-weight: bold
+
 
 // секция responsive
 .responsive
@@ -145,6 +161,200 @@ a.button
 .blog
 	background-color: $gray-color
 	text-align: left
+	position: relative
+	h2
+		margin-bottom: 0px
+
+	/////// левая часть ////////
+	.blog__left 
+		padding: 50px 0
+	// кнопки сортировки
+	.btn__sort
+		background-color: transparent
+		color: $bgc-color
+		border: none
+		font-size: 30px
+		padding-top: 5px
+		float: right
+		opacity: .7
+		&:hover
+			opacity: 1
+		&--active
+			color: #000
+			opacity: 1
+	//карточки блога
+	.blog__card	
+		background-color: #FFF
+		border-radius: 4px
+		border-bottom: 1px solid darken($gray-color, 5%)
+		margin-bottom: 30px
+	.blog__img
+		img
+			width: 100%
+	.blog__content
+		padding: 20px
+	.blog__date
+		font-size: 14px
+		opacity: .9
+		font-weight: bold
+		margin-bottom: 10px
+	.blog__head
+		font-size: 21px
+		font-weight: bold
+		line-height: 24px
+		color: $bgc-color
+		margin-bottom: 20px
+		display: block
+		&:hover
+			color: $link-color
+	.blog__desc
+		opacity: .8
+		font-size: 14px
+		margin-bottom: 30px
+	.blog__by
+		font-weight: bold
+		font-size: 14px
+		a 
+			color: $link-color
+			&:hover
+				color: darken($link-color, 10%)
+
+	//страницы блога
+	.blog__pages
+		.blog__page
+			display: inline-block
+			float: left
+			padding: 10px 10px
+			background-color: #FFF
+			margin-right: 10px
+			border-radius: 4px
+			color: $bgc-color
+			font-weight: bold
+			&:hover
+				background-color: darken($blue-color, 5%)
+				color: #fff
+			&--active
+				background-color: $accent-color
+				&:hover
+					background-color: $accent-color
+					color: $bgc-color
+			&--noactive
+				background-color: darken($gray-color, 10%)
+				color: rgba($bgc-color, 0.3)
+				&:hover
+					background-color: darken($gray-color, 8%)
+					color: rgba($bgc-color, 0.3)
+					cursor: default
+
+	//// правая часть (сортировка) /////
+	.blog__right
+		background-color: #495565
+		color: #fff
+		position: absolute
+		right: 0
+		padding: 50px 35px
+		height: 100%
+		a 
+			color: #fff
+		.blog__search
+			width: 300px
+			label
+				width: 100%
+				input
+					width: 85%
+
+		//форма сортировки
+		.form-sort
+			&__line
+				display: inline-block
+			&__head
+				color: #fff
+				margin: 40px 25px 20px 0
+				display: inline-block
+			&__btn
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background-color: darken($blue-color, 10%)
+				border: none
+				line-height: 40px
+				font-size: 20px
+				transition: all ease 0.2s
+				i 
+					transition: all ease 0.3s
+				&:hover
+					background-color: $accent-color
+					color: $bgc-color
+					i 
+						transform: rotate(-90deg)
+			&__category
+				width: 300px
+			&__item
+				font-size: 18px
+				font-weight: bold
+				padding: 15px 30px
+				display: block
+				border-bottom: 1px solid lighten($blue-color, 10%)
+				&:hover
+					color: lighten($blue-color, 40%)
+				&--active
+					color: $accent-color
+					position: relative
+					&::before
+						position: absolute
+						content: ""
+						top: 15px
+						left: -63px
+						border: 13px solid transparent
+						border-right: 20px solid $blue-color
+					&:hover
+						color: $accent-color
+
+
+// сеция полного блога
+.full-blogs
+	// навигация блога
+	&__top
+		padding: 25px 0
+		background-color: lighten($blue-color, 10%)
+		color: #fff
+	&__head
+		float: left
+		color: #fff
+	&__nav
+		float: right
+	.btn
+		background-color: $blue-color
+		color: #fff
+		&:hover
+			background-color: $accent-color
+			color: $bgc-color
+	.btn__prev
+		margin-right: 5px
+		i 
+			margin-left: 0
+			margin-right: 15px
+	.btn__next
+		i 
+			margin-right: 0
+			margin-left: 15px
+
+// контент блога
+.full-blog
+	&__head
+		font-size: 48px
+		line-height: 60px
+		display: inline-block
+		margin: 45px 0 20px
+	&__inf
+		margin-bottom: 30px
+		li 
+			display: inline-block
+	&__img
+		width: 100%
+		img
+			width: 100%
+
 
 
 @import "media"
