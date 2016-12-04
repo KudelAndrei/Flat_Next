@@ -347,9 +347,40 @@ a.button
 		display: inline-block
 		margin: 45px 0 20px
 	&__inf
-		margin-bottom: 30px
+		margin-bottom: 20px
 		li 
 			display: inline-block
+			margin-right: 35px
+			position: relative
+			font-weight: bold
+			line-height: 35px
+			color: rgba($bgc-color, .7)
+			&::after
+				position: absolute
+				content: "/"
+				top: 0
+				right: -22px
+			&:last-child
+				&::after
+					content: ""
+			span
+				width: 35px
+				height: 35px
+				background-color: $link-color
+				border-radius: 50%
+				color: #fff
+				display: inline-block
+				text-align: center
+				line-height: 35px
+				margin-right: 8px
+				position: relative
+				&::before
+					position: absolute
+					content: ""
+					border: 6px solid transparent
+					border-top: 7px solid $link-color
+					bottom: -11px
+					left: 12px
 	&__img
 		width: 100%
 		img
