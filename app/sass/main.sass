@@ -341,6 +341,7 @@ a.button
 
 // контент блога
 .full-blog
+	padding-bottom: 30px
 	&__head
 		font-size: 48px
 		line-height: 60px
@@ -383,8 +384,49 @@ a.button
 					left: 12px
 	&__img
 		width: 100%
+		margin-bottom: 20px
 		img
 			width: 100%
+	&__content
+		margin-bottom: 20px
+	&__subhead
+		font-size: 18px
+	&__subtit
+		margin: 10px 0
+	&__desc
+		font-size: 14px
+	/// блок автора ///
+
+	// часть автора
+	&__left
+		float: left 
+		display: table
+		.blog-auth
+			&__img
+				width: 150px
+				height: 150px
+				overflow: hidden
+				border-radius: 50%
+				float: left
+				display: table-cell
+				margin-right: 25px
+				img
+					width: 100%	
+			&__write
+				display: table-cell
+				vertical-align: middle
+				font-size: 18px
+				a 
+					color: $bgc-color 
+					font-weight: bold
+					font-size: 20px
+
+
+	// часть like
+	&__right
+		float: right
+		vertical-align: midle
+
 
 
 
