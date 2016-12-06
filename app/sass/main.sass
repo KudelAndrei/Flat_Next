@@ -583,19 +583,30 @@ a.button
 			border-top: 1px solid $accent-color
 
 // секция contact
+
 .contact
 	padding-bottom: 40px
 	text-align: left
+	border-bottom: 1px solid lighten($bgc-color, 40%)
+	.sect__head, .sect__desc
+		text-align: center
 	&__wrap
 		position: relative
+		i 
+			color: darken($accent-color, 2%)
+			font-size: 20px
+			margin-right: 10px
 		&::before
 			position: absolute
 			content: ""
-			top: 0
+			top: 20px
 			right: 40px
 			width: 1px
 			height: 50px
 			background-color: darken($gray-color, 10%)
+		&--last
+			&::before
+				display: none
 	.logo
 		color: $bgc-color
 		text-shadow: none
@@ -620,6 +631,18 @@ a.button
 			margin-bottom: 14px
 			font-size: 18px
 			line-height: 22px
+
+
+//футер
+.main-footer
+	background-color: $bgc-color
+	color: #fff
+	text-align: center
+	font-size: 14px
+	font-weight: bold
+	padding: 50px 0
+	a 
+		color: $accent-color
 
 
 
