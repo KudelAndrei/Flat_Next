@@ -26,7 +26,22 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		asNavFor: '.sl-header',
 		centerMode: true,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+		{
+			breakpoint: 1100,
+			settings: {
+				arrows: false,
+				slidesToShow: 2
+			}
+		},
+		{
+			breakpoint: 700,
+			settings: {
+				arrows: false,
+				slidesToShow: 1
+			}
+		}]
 	});
 
 	// слайдер portfolio
