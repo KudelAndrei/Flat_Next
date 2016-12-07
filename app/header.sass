@@ -88,8 +88,8 @@ a.logo
 		transition: all ease-in-out 0.2s
 		position: relative
 		background-color: $accent-color
-		width: 44px
-		height: 40px
+		width: 40px
+		height: 36px
 		box-shadow: $text-shadow
 		float: left
 		border-radius: 4px
@@ -104,11 +104,11 @@ a.logo
 			left: 50%
 			transform: translateX(-50%)
 			&:nth-child(1)
-				top: 9px
+				top: 7px
 			&:nth-child(2)
-				top: 18px
+				top: 16px
 			&:nth-child(3)
-				top: 27px
+				top: 25px
 	p 
 		font-size: 30px
 		font-weight: bold
@@ -163,6 +163,56 @@ a.logo
 					transform: scale(0.9)
 					border-radius: 50%
 
+// мобильное меню
+.toggle-menu
+	display: inline-block
+	position: relative
+	float: left
+	
+	span
+		background-color: $accent-color
+		width: 3px
+		height: 35px
+		position: relative
+		top: 0
+		display: inline-block
+		transition: all ease-in-out 0.5s
+		&:nth-child(1)
+			left: 0
+		&:nth-child(2)
+			left: 5px
+		&:nth-child(3)
+			left: 10px
+	em 
+		margin-left: 20px
+		line-height: 35px
+		position: absolute
+	&:hover
+		span
+			&:nth-child(1), 
+			&:nth-child(3)
+				top: -3px
+			&:nth-child(2)
+				top: 3px
+	&.on 
+		span
+			transform: rotate(270deg)
+			&:nth-child(1)
+				transform: rotate(126deg)
+				top: -12px
+				left: 19px
+				height: 25px
+			&:nth-child(3)
+				left: 4px
+				height: 25px
+				transform: rotate(235deg)
+				top: 2px
+		&:hover
+			span
+				&:nth-child(2)
+					top: 0
+
+
 
 //шапка сайта
 .main-head
@@ -182,6 +232,7 @@ a.logo
 	
 	// form шапки
 	.top-form
+		float: right
 		&__auth, &__rand
 			background-color: $bgc-color 
 			color: #fff
